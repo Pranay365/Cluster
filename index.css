@@ -1,0 +1,63 @@
+body {
+  background-color: darkgray;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+  border-radius: 50%;
+  margin: auto;
+  margin-top: auto;
+  transition: 1s;
+}
+.circle:hover {
+  background: darkgreen;
+  transform: translateX(200px);
+}
+.black-line {
+  width: 100%;
+  height: 50%;
+  background: black;
+}
+.black-line::after {
+  content: "lorem epsum demon";
+}
+.green-line {
+  width: 100%;
+  height: 50%;
+  background: white;
+}
+.mario-front {
+  height: 30px;
+  width: 30px;
+  animation-name: drive;
+  animation-duration: 5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+.mario-back {
+  height: 30px;
+  width: 30px;
+  animation-name: drive-back;
+  animation-duration: 5s;
+  animation-delay: 5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+@keyframes drive {
+  from {
+    transform: translateX(200px);
+  }
+  to {
+    transform: translateX(1200px) rotateY(180deg);
+  }
+}
+@keyframes drive-back {
+  from {
+    transform: translateX(1200px) rotateY(180deg);
+  }
+  to {
+    transform: translateX(200px);
+  }
+}
